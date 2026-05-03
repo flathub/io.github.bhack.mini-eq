@@ -23,6 +23,19 @@ cleanup:
   - "*.a"
   - "*.la"
 modules:
+  - name: libebur128
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+      - -DBUILD_SHARED_LIBS=ON
+      - -DENABLE_TESTS=OFF
+      - -DENABLE_FUZZER=OFF
+    sources:
+      - type: git
+        url: https://github.com/jiixyj/libebur128.git
+        tag: v1.2.6
+        commit: 67b33abe1558160ed76ada1322329b0e9e058b02
+
   - name: pipewire-filter-chain-module
     buildsystem: meson
     config-opts:
@@ -137,5 +150,5 @@ modules:
       - cp -a src/mini_eq/assets/icons ${FLATPAK_DEST}/share/
     sources:
       - type: archive
-        url: https://github.com/bhack/mini-eq/releases/download/v0.2.0/mini_eq-0.2.0.tar.gz
-        sha256: 2cdd9cec38a11bea1ce44dca57e9ff20109f1940e2e3b4453aa1dcd0539ddc0c
+        url: https://github.com/bhack/mini-eq/releases/download/v0.3.0/mini_eq-0.3.0.tar.gz
+        sha256: 5d75aacc582099bf39ebea312d5dd45b3d734276355bff521d879f9e20654dba
