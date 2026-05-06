@@ -150,5 +150,5 @@ modules:
       - cp -a src/mini_eq/assets/icons ${FLATPAK_DEST}/share/
     sources:
       - type: archive
-        url: https://github.com/bhack/mini-eq/releases/download/v0.4.0/mini_eq-0.4.0.tar.gz
-        sha256: 1da22a0f217959b4c85ab5debe0c6e06518a137cf2837c675820d570c0d9ba5e
+        url: https://github.com/bhack/mini-eq/releases/download/v0.5.0/mini_eq-0.5.0.tar.gz
+        sha256: d7f75000254ba3fffc8fe78866a9f1dd801a492009dbd8ccbe7e4221ec743f71
