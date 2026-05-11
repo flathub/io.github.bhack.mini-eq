@@ -132,6 +132,7 @@ modules:
   - name: mini-eq
     buildsystem: simple
     build-commands:
+      - sed -i 's|raw.githubusercontent.com/bhack/mini-eq/v0.7.4/|raw.githubusercontent.com/bhack/mini-eq/83a31f550b8855281b358c36472b2e795a07425a/|g' data/io.github.bhack.mini-eq.metainfo.xml
       - python3 -m pip install --no-index --no-deps --no-build-isolation --prefix=${FLATPAK_DEST} .
       - install -Dm644 data/io.github.bhack.mini-eq.desktop -t ${FLATPAK_DEST}/share/applications
       - install -Dm644 data/io.github.bhack.mini-eq.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo
