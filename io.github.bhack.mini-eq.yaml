@@ -132,12 +132,12 @@ modules:
   - name: mini-eq
     buildsystem: simple
     build-commands:
-      - sed -i 's|raw.githubusercontent.com/bhack/mini-eq/v0.7.4/|raw.githubusercontent.com/bhack/mini-eq/83a31f550b8855281b358c36472b2e795a07425a/|g' data/io.github.bhack.mini-eq.metainfo.xml
+      - sed -i 's|raw.githubusercontent.com/bhack/mini-eq/v0.7.4/|raw.githubusercontent.com/bhack/mini-eq/4b6e2c57a3d053ac3289ae657d1a897c60e4efb1/|g' data/io.github.bhack.mini-eq.metainfo.xml
       - python3 -m pip install --no-index --no-deps --no-build-isolation --prefix=${FLATPAK_DEST} .
       - install -Dm644 data/io.github.bhack.mini-eq.desktop -t ${FLATPAK_DEST}/share/applications
       - install -Dm644 data/io.github.bhack.mini-eq.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo
       - cp -a src/mini_eq/assets/icons ${FLATPAK_DEST}/share/
     sources:
       - type: archive
-        url: https://github.com/bhack/mini-eq/archive/83a31f550b8855281b358c36472b2e795a07425a.tar.gz
-        sha256: 0a6237b8c0c0f7f15a8f6043f0fee54799ca53e7129112116f7275b09a9eb4ff
+        url: https://github.com/bhack/mini-eq/archive/4b6e2c57a3d053ac3289ae657d1a897c60e4efb1.tar.gz
+        sha256: 18c1a2bcdb93b8d8fc6efc4762b34652d53ffa0f2bd78662037b4b38304854a6
