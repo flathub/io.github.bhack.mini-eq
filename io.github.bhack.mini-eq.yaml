@@ -121,6 +121,7 @@ modules:
     buildsystem: meson
     config-opts:
       - -Dwheel=true
+      - -Dtests=false
     sources:
       - type: git
         url: https://github.com/bhack/pipewire-gobject.git
@@ -132,12 +133,11 @@ modules:
   - name: mini-eq
     buildsystem: simple
     build-commands:
-      - sed -i 's|raw.githubusercontent.com/bhack/mini-eq/v0.7.4/|raw.githubusercontent.com/bhack/mini-eq/2d4b55dbd4d37d53f7c7227e685f2ea6fecd218f/|g' data/io.github.bhack.mini-eq.metainfo.xml
       - python3 -m pip install --no-index --no-deps --no-build-isolation --prefix=${FLATPAK_DEST} .
       - install -Dm644 data/io.github.bhack.mini-eq.desktop -t ${FLATPAK_DEST}/share/applications
       - install -Dm644 data/io.github.bhack.mini-eq.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo
       - cp -a src/mini_eq/assets/icons ${FLATPAK_DEST}/share/
     sources:
       - type: archive
-        url: https://github.com/bhack/mini-eq/archive/2d4b55dbd4d37d53f7c7227e685f2ea6fecd218f.tar.gz
-        sha256: f3df675a3d33dd5f501e281faf95b7e78208d2285424a9de5ff1f62fbd5d661b
+        url: https://github.com/bhack/mini-eq/releases/download/v0.7.4/mini_eq-0.7.4.tar.gz
+        sha256: 11cb811519c57ec7eaba587f641de84e4d575f8b433c85294961390f528dbbeb
