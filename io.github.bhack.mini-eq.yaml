@@ -121,11 +121,12 @@ modules:
     buildsystem: meson
     config-opts:
       - -Dwheel=true
+      - -Dtests=false
     sources:
       - type: git
         url: https://github.com/bhack/pipewire-gobject.git
-        tag: 0.3.5
-        commit: b570bc4ff0a53223416fff9a4fc05d367273789d
+        tag: 0.3.7
+        commit: 1cd6ccc0f5e0d1d62ab8fd42dc9f200a112554f6
 
   - python3-dependencies.yaml
 
@@ -138,5 +139,5 @@ modules:
       - cp -a src/mini_eq/assets/icons ${FLATPAK_DEST}/share/
     sources:
       - type: archive
-        url: https://github.com/bhack/mini-eq/releases/download/v0.7.2/mini_eq-0.7.2.tar.gz
-        sha256: de52343593aedc9116ad595a7bcbc2c039e4e006ca863daeca31ca9f9c5b892d
+        url: https://github.com/bhack/mini-eq/releases/download/v0.7.4/mini_eq-0.7.4.tar.gz
+        sha256: 11cb811519c57ec7eaba587f641de84e4d575f8b433c85294961390f528dbbeb
