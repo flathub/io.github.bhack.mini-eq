@@ -7,6 +7,7 @@ finish-args:
   - --socket=fallback-x11
   - --socket=wayland
   - --share=ipc
+  - --share=network
   - --device=dri
   - --filesystem=xdg-run/pipewire-0:ro
   - --env=PIPEWIRE_MODULE_DIR=/app/lib/pipewire-0.3:/usr/lib/x86_64-linux-gnu/pipewire-0.3:/usr/lib/aarch64-linux-gnu/pipewire-0.3:/usr/lib/pipewire-0.3
@@ -136,8 +137,10 @@ modules:
       - python3 -m pip install --no-index --no-deps --no-build-isolation --prefix=${FLATPAK_DEST} .
       - install -Dm644 data/io.github.bhack.mini-eq.desktop -t ${FLATPAK_DEST}/share/applications
       - install -Dm644 data/io.github.bhack.mini-eq.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo
+      - install -Dm644 src/mini_eq/assets/schemas/io.github.bhack.mini-eq.gschema.xml -t ${FLATPAK_DEST}/share/glib-2.0/schemas
+      - glib-compile-schemas --strict ${FLATPAK_DEST}/share/glib-2.0/schemas
       - cp -a src/mini_eq/assets/icons ${FLATPAK_DEST}/share/
     sources:
       - type: archive
-        url: https://github.com/bhack/mini-eq/releases/download/v0.7.4/mini_eq-0.7.4.tar.gz
-        sha256: 11cb811519c57ec7eaba587f641de84e4d575f8b433c85294961390f528dbbeb
+        url: https://github.com/bhack/mini-eq/releases/download/v0.8.0/mini_eq-0.8.0.tar.gz
+        sha256: 97b394d7eaa26c754ac81d3b1e6310130965468c7f0ea3c6f6c6060148161dac
