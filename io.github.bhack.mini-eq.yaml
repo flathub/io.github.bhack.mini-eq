@@ -126,8 +126,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/bhack/pipewire-gobject.git
-        tag: 0.3.7
-        commit: 1cd6ccc0f5e0d1d62ab8fd42dc9f200a112554f6
+        tag: 0.3.9
+        commit: d132598a7e03800fb169fd39d2c71afacdb47195
 
   - python3-dependencies.yaml
 
@@ -142,5 +142,5 @@ modules:
       - cp -a src/mini_eq/assets/icons ${FLATPAK_DEST}/share/
     sources:
       - type: archive
-        url: https://github.com/bhack/mini-eq/releases/download/v0.8.2/mini_eq-0.8.2.tar.gz
-        sha256: 382160062d56992c5844ad0a5aa59c0081c5dd167d73c757a813862b8fa4238d
+        url: https://github.com/bhack/mini-eq/releases/download/v0.8.3/mini_eq-0.8.3.tar.gz
+        sha256: 08b204d9b21b592df482b94742d036734a7c9127f6d54c022ca3b89abd3e926c
