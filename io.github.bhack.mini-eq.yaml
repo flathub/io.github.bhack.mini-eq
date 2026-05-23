@@ -141,6 +141,6 @@ modules:
       - glib-compile-schemas --strict ${FLATPAK_DEST}/share/glib-2.0/schemas
       - cp -a src/mini_eq/assets/icons ${FLATPAK_DEST}/share/
     sources:
-      - type: archive
-        url: https://github.com/bhack/mini-eq/releases/download/v0.8.3/mini_eq-0.8.3.tar.gz
-        sha256: 08b204d9b21b592df482b94742d036734a7c9127f6d54c022ca3b89abd3e926c
+      - type: git
+        url: https://github.com/bhack/mini-eq.git
+        commit: db5352aad1b291df8a039126512dbfe3672ead51
