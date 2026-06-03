@@ -143,4 +143,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/bhack/mini-eq.git
-        commit: 7c8813568641ef9c774d3e35e767b0042809b75e
+        commit: 313aafd82d50fe3f61ba35363254091be6be7e02
