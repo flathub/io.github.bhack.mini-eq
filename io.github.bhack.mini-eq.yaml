@@ -105,11 +105,13 @@ modules:
       - -Dflatpak=enabled
     make-args:
       - src/modules/libpipewire-module-filter-chain.so
+      - src/modules/libpipewire-module-loopback.so
       - spa/plugins/filter-graph/libspa-filter-graph.so
       - spa/plugins/filter-graph/libspa-filter-graph-plugin-builtin.so
     no-make-install: true
     build-commands:
       - install -Dm755 src/modules/libpipewire-module-filter-chain.so ${FLATPAK_DEST}/lib/pipewire-0.3/libpipewire-module-filter-chain.so
+      - install -Dm755 src/modules/libpipewire-module-loopback.so ${FLATPAK_DEST}/lib/pipewire-0.3/libpipewire-module-loopback.so
       - install -Dm755 spa/plugins/filter-graph/libspa-filter-graph.so ${FLATPAK_DEST}/lib/spa-0.2/filter-graph/libspa-filter-graph.so
       - install -Dm755 spa/plugins/filter-graph/libspa-filter-graph-plugin-builtin.so ${FLATPAK_DEST}/lib/spa-0.2/filter-graph/libspa-filter-graph-plugin-builtin.so
     sources:
@@ -142,5 +144,5 @@ modules:
       - cp -a src/mini_eq/assets/icons ${FLATPAK_DEST}/share/
     sources:
       - type: archive
-        url: https://github.com/bhack/mini-eq/releases/download/v0.8.8/mini_eq-0.8.8.tar.gz
-        sha256: 7773a5abc509687f55765f21343a9077f9eca881adf5426fd2fe7a2a34d56323
+        url: https://github.com/bhack/mini-eq/releases/download/v0.8.9/mini_eq-0.8.9.tar.gz
+        sha256: b6c6dfcaae450161824084637634994d7446821624560c05481e7b0d65e34685
